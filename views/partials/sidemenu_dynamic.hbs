@@ -1,0 +1,60 @@
+<div class="navbar-default sidebar" role="navigation">
+	<div class="sidebar-nav navbar-collapse">
+		<ul class="nav" id="side-menu">
+			<li class="sidebar-search">
+				<div class="input-group custom-search-form">
+					<form action="/search" method="POST">
+						<span class="input-group-btn input-group-xs">
+								<input class='form-control input-xs' type="text" name='q' class="form-control" placeholder="Search...">
+	              <button class="btn btn-default" type="button">
+	                  <i class="fa fa-search"></i>
+	              </button>
+	          </span>
+					</form>
+				</div>
+			</li>
+			<li>
+				<a href="/valuedrivers"><i class="fa fa-dollar fa-fw"></i> Value Drivers<span class="fa arrow"></span></a>
+				<!-- <ul class="nav nav-second-level">
+					{{#each allvaluedrivers}}
+						<li class="active">
+							<a href="#"><i class="fa {{this.icon}} fa-fw"></i> {{this.valuedriver_short}} </a>
+						</li>
+					{{/each}}
+				</ul> -->
+			</li>
+			<li>
+				<a href="/casesforchange"><i class="fa fa-briefcase fa-fw"></i> Cases for Change<span class="fa arrow"></span></a>
+				<!-- <ul class="nav nav-second-level">
+					{{#each allcasesforchange}}
+						<li>
+							<a href="#">{{this.valuedriver_short}}<span class="fa arrow"></span></a>
+						</li>
+					{{/each}}
+				</ul> -->
+			</li>
+			<li>
+				<a href="/proofpoints"><i class="fa fa-camera-retro fa-fw"></i> Proof Points<span class="fa arrow"></span></a>
+				<!-- <ul class="nav nav-second-level">
+					{{#each allproofpoints}}
+						<li>
+							<a href="{{this.url}}"> {{this.title}}</a>
+						</li>
+					{{/each}}
+				</ul> -->
+				<ul class="nav nav-second-level">
+						<li>
+							<a href="/proofpoints/byCompany">by Company</a>
+						</li>
+						<li>
+							<a href="/proofpoints/byIndustry">by Topic</a>
+						</li>
+				</ul>
+			</li>
+			<li>
+				<a href="/tags"><i class="fa fa-tag fa-fw"></i> Tags<span class="fa arrow"></span></a>
+			</li>
+		</ul>
+	</div>
+</div>
+</nav>

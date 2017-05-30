@@ -1,0 +1,72 @@
+<div id="wrapper">
+  <div id="page-wrapper">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item">Tag: {{tag}}</li>
+    </ol>
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header"><i class="fa fa-tag fa-fw"></i>Tag: {{tag}}</h1>
+<h5>not wired up yet</h5>
+          </div>
+          <!-- /.col-lg-12 -->
+      </div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4>Value Drivers</h4>
+		</div>
+		<!-- /.panel-heading -->
+		<div class="panel-body">
+			<div class="table-responsive">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Value Driver</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each vdresults}}
+							<tr class="success">
+								<td><a href='{{this.url}}'>{{this.valuedriver}}</a></td>
+							</tr>
+						{{/each}}
+					</tbody>
+				</table>
+			</div>
+			<!-- /.table-responsive -->
+		</div>
+		<!-- /.panel-body -->
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4>Proof Points</h4>
+		</div>
+		<!-- /.panel-heading -->
+		<div class="panel-body">
+			<div class="table-responsive">
+				{{#if ppresults}}
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Company</th>
+								<th>Title</th>
+							</tr>
+						</thead>
+						<tbody>
+							{{#each ppresults}}
+								<tr class="success">
+									<td><a href='{{this.url}}'>{{this.company}}</a></td>
+									<td><a href='{{this.url}}'>{{this.title}}</a></td>
+								</tr>
+							{{/each}}
+						</tbody>
+					</table>
+					{{else }} No Proof Point Results Found.
+				{{/if}}
+			</div>
+			<!-- /.table-responsive -->
+		</div>
+		<!-- /.panel-body -->
+	</div>
+</div>
+<!-- /.page -->

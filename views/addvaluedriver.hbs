@@ -1,0 +1,109 @@
+<!-- Add Dialog -->
+<div id="wrapper">
+      <!-- Navigation -->
+
+      <div id="page-wrapper">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/valuedrivers">Value Drivers</a></li>
+          <li class="breadcrumb-item">Add Value Drivers</li>
+        </ol>
+
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1 class="page-header"><i class="fa fa-briefcase fa-fw"></i>Add Value Driver</h1>
+              </div>
+              <!-- /.col-lg-12 -->
+          </div>
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+<!--           <div class="panel-heading">Add Value Driver</div>
+ -->          <div class="panel-body">
+    				<form action='/addvaluedriver' METHOD='POST'>
+    					<div class="form-group">
+    						<label for="name" class="control-label">Value Driver Name</label>
+    						<input type="text" class="form-control" id="name" name="name" placeholder="">
+    					</div>
+    					<div class="form-group">
+    						<label for="shortname" class="control-label">Short Name</label>
+    						<input type="text" class="form-control" id="shortname" name="shortname" placeholder="">
+    					</div>
+
+    					<div class="form-group">
+    						<label for="slug" class="control-label">Slug</label>
+    						<input type="text" class="form-control" id="slug" name="slug" placeholder="">
+    					</div>
+    					<div class="form-group">
+    						<label for="icon" class="control-label">Icon</label>
+    						<input type="text" class="form-control" id="icon" name="icon" placeholder="fa-automobile">
+    					</div>
+    					<div class="form-group">
+    						<label for="description" class="control-label">Description</label>
+    						<textarea class='form-control' name='description' id='description'></textarea>
+    					</div>
+    					<div class='col-md-6'>
+    						<div class="form-group form-inline" id="beforescenarios">
+    							<label for="beforescenario" class="control-label">Before Scenarios</label></br>
+                  <input type="text" class='form-control' name="beforescenarios" id="beforescenario" value="">
+                  <button type="button" class="btn btn-primary btn-sm" id="addbeforescenario"/>Add</button>
+    						</div>
+    					</div>
+              <div class='col-md-6'>
+    						<div class="form-group form-inline" id="negativeconsequences">
+    							<label for="negativeconsequence" class="control-label">Negative Consequences</label></br>
+                  <input type="text" class='form-control' name="negativeconsequences" id="negativeconsequence" value="">
+                  <button type="button" class="btn btn-primary btn-sm" id="addnegativeconsequence"/>Add</button>
+    						</div>
+    					</div>
+              <div class='col-md-6'>
+    						<div class="form-group form-inline" id="afterscenarios">
+    							<label for="afterscenario" class="control-label">After Scenarios</label></br>
+                  <input type="text" class='form-control' name="afterscenarios" id="afterscenario" value="">
+                  <button type="button" class="btn btn-primary btn-sm" id="addafterscenario"/>Add</button>
+    						</div>
+    					</div>
+              <div class='col-md-6'>
+    						<div class="form-group form-inline" id="positivebusinessoutcomes">
+    							<label for="positivebusinessoutcome" class="control-label">Positive Business Outcome</label></br>
+                  <input type="text" class='form-control' name="positivebusinessoutcomes" id="positivebusinessoutcome" value="">
+                  <button type="button" class="btn btn-primary btn-sm" id="addpositivebusinessoutcome"/>Add</button>
+    						</div>
+    					</div>
+              <div class='col-md-12'>
+                <div class="form-group form-inline" id="requiredcapabilities">
+                  <label for="requirecapability" class="control-label">Required Capabilities</label></br>
+                  <input type="text" class='form-control' name="requiredcapabilities" id="requiredcapability" value="">
+                  <button type="button" class="btn btn-primary btn-sm" id="addrequiredcapability"/>Add</button>
+                </div>
+              </div>
+              <div class='col-md-6'>
+                <div class="form-group form-inline" id="howwedoits">
+                  <label for="howwedoit" class="control-label">How We Do It</label></br>
+                  <input type="text" class='form-control' name="howwedoit" id="howwedoit" value="">
+                  <button type="button" class="btn btn-primary btn-sm" id="addhowwedoit"/>Add</button>
+                </div>
+              </div>
+              <div class='col-md-6'>
+                <div class="form-group form-inline" id="howwedoitbetters">
+                  <label for="howwedoitbetter" class="control-label">How We Do It BETTER</label></br>
+                  <input type="text" class='form-control' name="howwedoitbetter" id="howwedoitbetter" value="">
+                  <button type="button" class="btn btn-primary btn-sm" id="addhowwedoitbetter"/>Add</button>
+                </div>
+              </div>
+              <div class='row'>
+              <div class='col-md-12'>
+    					<div class="form-group">
+    						<!-- Submit Button -->
+    						<button type="submit" class="btn btn-primary">Save</button>
+    					</div>
+            </div>
+          </div>
+    				</form>
+          </div>
+
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+</div>

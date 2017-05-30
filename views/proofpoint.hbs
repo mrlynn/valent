@@ -1,0 +1,93 @@
+<div id="page-wrapper">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/proofpoints">Proofpoints</li></a>
+    <li class="breadcrumb-item active">{{proofpoint.company}}</li>
+  </ol>
+  {{#if proofpoint}}
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header"><i class="fa fa-camera-retro fa-fw"></i> Proof Point: {{proofpoint.company}}</h1>
+      {{#if proofpoint.industry}}<h5>Industry: {{proofpoint.industry}}</h5>{{/if}}
+		</div>
+		<!-- /.col-lg-12 -->
+    <div class="panel-body">
+      {{#each proofpoint.tags}}
+        <a href='/tag/{{this}}'><span class="label label-info">{{this}}</a></span>
+      {{/each}}
+    </div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4">
+			<div class="panel panel-default">
+				<!-- /.panel-heading -->
+				<div class="panel-body">
+					<img class="center-block" width=160 src='{{proofpoint.image}}'>
+				</div>
+				<!-- /.panel-body -->
+			</div>
+			<!-- /.panel -->
+		</div>
+		<!-- /col-lg-4-->
+		<div class="col-lg-8">
+			<div class="panel panel-default">
+				<!-- /.panel-heading -->
+				<div class="panel-body">
+					<h1>{{proofpoint.title}}</h1>
+					<h3>{{proofpoint.description}}</h3>
+				</div>
+				<!-- /.panel-body -->
+			</div>
+			<!-- /.panel -->
+		</div>
+  </div> <!--/row-->
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="panel panel-green">
+				<!-- /.panel-heading -->
+        <div class="panel-heading">
+          <h2>Problem</h2>
+        </div>
+        <div class="panel-body">
+					<h4>{{proofpoint.problem}}</h4>
+				</div>
+				<!-- /.panel-body -->
+			</div>
+    </div>
+    <div class="col-lg-4">
+      <div class="panel panel-green">
+				<!-- /.panel-heading -->
+        <div class="panel-heading">
+          <h2>Solution</h2>
+        </div>
+        <div class="panel-body">
+					<h4>{{proofpoint.solution}}</h4>
+				</div>
+				<!-- /.panel-body -->
+			</div>
+    </div>
+    <div class="col-lg-4">
+      <div class="panel panel-green">
+				<!-- /.panel-heading -->
+        <div class="panel-heading">
+          <h2>Results</h2>
+        </div>
+        <div class="panel-body">
+					<h4>{{proofpoint.results}}</h4>
+				</div>
+				<!-- /.panel-body -->
+			</div>
+    </div>
+  </div>
+  {{else }}
+    <div class="row">
+      <div class="well">
+        <h4>Proof Point Details</h4>
+        <p>Select a Proof Point</p>
+      </div>
+    </div>
+  {{/if}}
+		<!-- /col-lg-4-->
+		<!-- /.row -->
+	</div>
+	<!-- /.page -->

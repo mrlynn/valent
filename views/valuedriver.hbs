@@ -1,0 +1,348 @@
+<div id="wrapper">
+      <!-- Navigation -->
+      <div id="page-wrapper">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/valuedrivers">Value Drivers</li></a>
+          <li class="breadcrumb-item active">{{valuedriver.valuedriver_short}}</li>
+        </ol>
+        <div class="col-lg-12">
+            <div id="success" class="alert alert-success" {{#if noMessage}}hidden{{/if}}>
+                {{successMsg}}
+            </div>
+            <div id="danger" class="alert alert-danger" {{#if noErrorMsg}}hidden{{/if}}>
+                {{errorMsg}}
+            </div>
+        </div>
+        {{#if valuedriver}}
+          <!-- /.row -->
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1 class="page-header"><i class="fa {{valuedriver.icon}} fa-fw"></i> {{valuedriver.valuedriver_short}}</h1>
+                  <h3>{{valuedriver.valuedriver_desc}}</h3>
+                  <div class="pull-right">
+                    <p data-placement="top" data-toggle="tooltip" title="Add Value Driver ">
+                        <button class="ui right floated btn btn-success btn-lg" data-title="view" data-toggle="modal" data-target="#view-{{this._id}}"> <span class="glyphicon glyphicon-plus"> </span> Add Value Driver
+                        </button>
+                    </p>
+                    <!-- Add Dialog -->
+                    <div class="modal fade" id="view-{{this._id}}" tabindex="-1" role="dialog" aria-labelledby="view" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                                    <h4 class="modal-title custom_align" id="Heading">Add</h4>
+                                </div>
+                                <div class="modal-body text-left">
+                                    <h4>Option not available yet.</h4>
+                                </div>
+                            <!-- /.modal-content -->
+                            </div>
+                        <!-- /.modal-dialog -->
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    {{#each valuedriver.tags}}
+                      <span class="label label-info">{{this}}</span>
+                    {{/each}}
+                  </div>
+              </div>
+              <!-- /.col-lg-12 -->
+          </div>
+          <!-- /.row -->
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="panel panel-yellow">
+                      <div class="panel-heading">
+                          <h3>Before Scenarios</h3>
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body">
+                          <div class="table-responsive">
+                              <table class="table table-bordered table-hover">
+                                  <tbody>
+                                    {{# each valuedriver.beforescenarios}}
+                                      <tr>
+                                          <td><h4>{{this}}</h4></td>
+                                      </tr>
+                                    {{/each}}
+
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-6 -->
+              <div class="col-lg-6">
+                  <div class="panel panel-red">
+                      <div class="panel-heading negativeconsequences">
+                          <h3>Negative Consequences</h3>
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body ">
+                          <div class="table-responsive">
+                              <table class="table table-bordered table-hover">
+
+                                  <tbody>
+                                    {{# each valuedriver.negativeconsequences}}
+                                      <tr>
+                                        <td><h4>{{this}}</h4></td>
+                                      </tr>
+                                    {{/each}}
+
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-6 -->
+          </div>
+          <!-- /.row -->
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="panel panel-green">
+                      <div class="panel-heading">
+                          <h3>After Scenarios</h3>
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body">
+                          <div class="table-responsive">
+                              <table class="table">
+
+                                  <tbody>
+                                    {{# each valuedriver.afterscenarios}}
+                                      <tr>
+                                        <td><h4>{{this}}</h4></td>
+                                      </tr>
+                                    {{/each}}
+
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-6 -->
+              <div class="col-lg-6">
+                  <div class="panel panel-green">
+                      <div class="panel-heading">
+                          <h3>Positive Business Outcomes</h3>
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body ">
+                          <div class="table-responsive table-bordered">
+                              <table class="table">
+
+                                  <tbody>
+                                    {{# each valuedriver.positivebusinessoutcomes}}
+                                      <tr>
+                                        <td><h4>{{this}}</h4></td>
+                                      </tr>
+                                    {{/each}}
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-6 -->
+          </div>
+          <!-- /.row -->
+
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h3>How we do it</h3>
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body">
+                          <div class="table-responsive">
+                              <table class="table">
+
+                                  <tbody>
+                                    {{# each valuedriver.howwedoit}}
+                                      <tr>
+                                        <td><h4>{{this}}</h4></td>
+                                      </tr>
+                                    {{/each}}
+
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-6 -->
+              <div class="col-lg-6">
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h3>How we do it Better!</h3>
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body ">
+                          <div class="table-responsive table-bordered">
+                              <table class="table">
+
+                                  <tbody>
+                                    {{# each valuedriver.howwedoitbetter}}
+                                      <tr>
+                                        <td><h4>{{this}}</h4></td>
+                                      </tr>
+                                    {{/each}}
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-6 -->
+          </div>
+          <div class="row">
+              <div class="col-lg-8">
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h3>Required Capabilities</h3>
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body">
+                        <div class="table-responsive table-bordered">
+                            <table class="table">
+
+                                <tbody>
+                                  {{#each valuedriver.requiredcapabilities}}
+                                    <tr>
+                                      <td><h4>{{this}}</h4></td>
+                                    </tr>
+                                  {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-6 -->
+              <div class="col-lg-4">
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h3>Success Metrics</h3>
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body">
+                        <div class="table-responsive table-bordered">
+                            <table class="table">
+
+                                <tbody>
+                                  {{#each valuedriver.metrics}}
+                                    <tr>
+                                      <td><h4>{{this}}</h4></td>
+                                    </tr>
+                                  {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-6 -->
+          </div>
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h3>Proof Points</h3>
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body">
+                          <div class="table-responsive">
+                              <table class="table">
+                                  <thead>
+                                      <tr>
+                                          <th colspan=2>Company</th>
+                                          <th>Title</th>
+                                          <th>Description</th>
+                                          <th>Products</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                    {{#each proofpoints}}
+                                      <tr class="table-row">
+                                        <td><a href='{{this.url}}'><img width=50 src='{{this.image}}'></a></td>
+                                        <td><a href='{{this.url}}'>{{this.company}}</a></td>
+                                        <td><a href='{{this.url}}'>{{this.title}}</a></td>
+                                        <td><a href='{{this.url}}'>{{this.description}}</a></td>
+                                        <td>
+                                          {{#each this.products}}
+                                            <h5>{{this}}</h5>
+                                          {{/each}}
+                                        </td>
+                                      </tr>
+                                    {{/each}}
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-6 -->
+          </div>
+
+          <!-- /.row -->
+      </div>
+      {{else}}
+        <div class="well">
+            <h4>Select a Value Driver or Case for Change from the left</h4>
+        </div>
+      {{/if}}
+      <!-- /#page-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+<!--
+  jQuery
+  <script src="../vendor/jquery/jquery.min.js"></script>
+
+  Bootstrap Core JavaScript
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  Metis Menu Plugin JavaScript
+  <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+  DataTables JavaScript
+  <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+  <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+  <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+
+  Custom Theme JavaScript
+  <script src="../javascripts/sb-admin-2.js"></script>
+
+  Page-Level Demo Scripts - Tables - Use for reference
+ -->

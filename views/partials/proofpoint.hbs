@@ -1,0 +1,57 @@
+<div id="page-wrapper">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">Proof Point</h1>
+		</div>
+		<!-- /.col-lg-12 -->
+	</div>
+	<div class="row">
+		<div class="col-lg-4">
+			<div class="panel panel-default">
+				<!-- /.panel-heading -->
+				<div class="panel-body">
+					{{<img src='{{proofpoint.image}}'>}}
+				</div>
+				<!-- /.panel-body -->
+			</div>
+			<!-- /.panel -->
+		</div>
+		<!-- /col-lg-4-->
+		<div class="col-lg-8">
+			<div class="panel panel-default">
+				<!-- /.panel-heading -->
+				<div class="panel-body">
+					<h1>{{proofpoint.company}}</h1>
+					<h3>{{proofpoint.description}}</h3>
+				</div>
+				<!-- /.panel-body -->
+			</div>
+			<!-- /.panel -->
+		</div>
+  </div> <!--/row-->
+  <div class="row">
+    <div class="col-lg-4">
+      <h2>Problem</h2>
+    </div>
+    <div class="col-lg-4">
+      <h2>Solution</h2>
+    </div>
+    <div class="col-lg-4">
+      <h2>Results</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      {{proofpoint.problem}}
+    </div>
+    <div class="col-lg-4">
+      {{proofpoint.solution}}
+    </div>
+    <div class="col-lg-4">
+      {{proofpoint.results}}
+    </div>
+  </div>
+		<!-- /col-lg-4-->
+		<!-- /.row -->
+	</div>
+	<!-- /.page -->

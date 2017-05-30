@@ -1,0 +1,292 @@
+<div id="wrapper">
+      <!-- Navigation -->
+      <div id="page-wrapper">
+        {{#if valuedriver}}
+          <!-- /.row -->
+          {{#each valuedrivers}}
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1 class="page-header">{{valuedriver}} </h1>
+                  <h3>{{this.valuedriver_desc}}</h3>
+              </div>
+              <!-- /.col-lg-12 -->
+          </div>
+          <div class="row">
+              <div class="col-lg-12">
+                  <!-- <div class="well">
+                      <h4>Value Card Details</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <a class="btn btn-default btn-lg btn-block" target="_blank" href="https://datatables.net/"><i class="fa fa-download fa-fw"></i> Download Value Card Presentation</a>
+                  </div> -->
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          Before Scenarios
+                      </div>
+
+                      <!-- /.panel-heading -->
+                      <div class="panel-body">
+                          <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                              <tbody>
+                                {{#each this.beforescenarios}}
+                                  <tr class="odd gradeX">
+                                      <td>{{this}}</td>
+                                  </tr>
+                                {{/each}}
+                              </tbody>
+                          </table>
+                          <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-12 -->
+          </div>
+          <!-- /.row -->
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          After Scenarios
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body">
+                          <div class="table-responsive">
+                              <table class="table table-striped table-bordered table-hover">
+
+                                  <tbody>
+                                    {{# each afterscenarios}}
+                                      <tr>
+                                          <td>{{this}}</td>
+                                      </tr>
+                                    {{/each}}
+
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-6 -->
+              <div class="col-lg-6">
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          Negative Consequences
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body">
+                          <div class="table-responsive">
+                              <table class="table table-striped table-bordered table-hover">
+
+                                  <tbody>
+                                    {{# each negativeconsequences}}
+                                      <tr>
+                                          <td>{{this}}</td>
+                                      </tr>
+                                    {{/each}}
+
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-6 -->
+          </div>
+          <!-- /.row -->
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          Positve Business Outcomes
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body">
+                          <div class="table-responsive">
+                              <table class="table table-striped">
+
+                                  <tbody>
+                                    {{# each negativeconsequences}}
+                                      <tr>
+                                          <td>{{this}}</td>
+                                      </tr>
+                                    {{/each}}
+
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-6 -->
+              <div class="col-lg-6">
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          Bordered Table
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body">
+                          <div class="table-responsive table-bordered">
+                              <table class="table">
+
+                                  <tbody>
+                                    {{# each negativeconsequences}}
+                                      <tr>
+                                          <td>{{this}}</td>
+                                      </tr>
+                                    {{/each}}
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-6 -->
+          </div>
+          <!-- /.row -->
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          Customer Proof Points
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body">
+                          <div class="table-responsive">
+                              <table class="table table-hover">
+                                  <thead>
+                                      <tr>
+                                          <th>Customer Name</th>
+                                          <th>Product</th>
+                                          <th>Before State</th>
+                                          <th>Negative Consequences</th>
+                                          <th>After State</th>
+                                          <th>PBO's</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                          <td>XYZ, Inc.</td>
+                                          <td>Mark</td>
+                                          <td>Otto</td>
+                                          <td>@mdo</td>
+                                      </tr>
+                                      <tr>
+                                          <td>2</td>
+                                          <td>Jacob</td>
+                                          <td>Thornton</td>
+                                          <td>@fat</td>
+                                      </tr>
+                                      <tr>
+                                          <td>3</td>
+                                          <td>Larry</td>
+                                          <td>the Bird</td>
+                                          <td>@twitter</td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-6 -->
+              <div class="col-lg-6">
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          Customer Testimonials
+                      </div>
+                      <!-- /.panel-heading -->
+                      <div class="panel-body">
+                          <div class="table-responsive">
+                              <table class="table">
+                                  <thead>
+                                      <tr>
+                                          <th>#</th>
+                                          <th>First Name</th>
+                                          <th>Last Name</th>
+                                          <th>Username</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr class="success">
+                                          <td>1</td>
+                                          <td>Mark</td>
+                                          <td>Otto</td>
+                                          <td>@mdo</td>
+                                      </tr>
+                                      <tr class="info">
+                                          <td>2</td>
+                                          <td>Jacob</td>
+                                          <td>Thornton</td>
+                                          <td>@fat</td>
+                                      </tr>
+                                      <tr class="warning">
+                                          <td>3</td>
+                                          <td>Larry</td>
+                                          <td>the Bird</td>
+                                          <td>@twitter</td>
+                                      </tr>
+                                      <tr class="danger">
+                                          <td>4</td>
+                                          <td>John</td>
+                                          <td>Smith</td>
+                                          <td>@jsmith</td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <!-- /.table-responsive -->
+                      </div>
+                      <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+              </div>
+              <!-- /.col-lg-6 -->
+          </div>
+
+          {{/each}}
+          <!-- /.row -->
+      </div>
+      {{else}}
+        <div class="well">
+            <h4>Select a Value Driver or Case for Change from the left</h4>
+        </div>
+      {{/if}}
+      <!-- /#page-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- jQuery -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Metis Menu Plugin JavaScript -->
+  <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+  <!-- DataTables JavaScript -->
+  <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+  <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+  <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script src="../javascripts/sb-admin-2.js"></script>
+
+  <!-- Page-Level Demo Scripts - Tables - Use for reference -->
